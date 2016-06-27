@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/data/healthapparatus.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data/healthfood.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data/healthpackage.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data/healthproducts.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scripts/hs.json" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,564 @@
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+ol, ul {
+  list-style: none;
+}
+body {
+  font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+  color: #666;
+  background: #fff;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+input,select,textarea{outline:none;}
+input:focus,select:focus,textarea:focus{border: none;}
+.clear{clear: both;display: block;content: '';}
+/***************************reset end********************************/
+@cr: #f5f6f6;
+.pr(){position: relative;}
+.pa(){position: absolute;}
+.fl(){float: left;}
+.fr(){float: right;}
+.mw(@w:1210px;){
+  min-width: @w;}
+.w(){
+  width: 1210px;margin: auto;
+}
+.bb(@c:#d6d6d6){
+  border-bottom: 1px solid @c;
+}
+.bl(@c:#666){
+  border-left: 1px solid @c;
+}
+.bki(@img,@img2){
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=@img2,sizingMethod='scale');
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  @media all and(min-width: 0) {
+    &{background: url(@img);}
+  }
+}
+.wh(@w:10px;@h:10px){width: @w;height: @h;}
+//渐变
+.linear(@c1:#FFF,@c2:#f3f3f3){
+  background: -webkit-linear-gradient(@c1,@c2);
+  background: -moz-linear-gradient(@c1,@c2);
+  background: -o-linear-gradient(@c1,@c2);
+  background: linear-gradient(@c1,@c2);
+}
+//阴影
+.boxshadow(@n1:10px,@n2:10px,@n3:20px,@n4:1px,@n5:rgba(0,0,0,0.3)){
+  box-shadow:@n1 @n2 @n3 @n4 @n5;
+  -webkit-box-shadow:@n1 @n2 @n3 @n4 @n5;
+  -moz-box-shadow:@n1 @n2 @n3 @n4 @n5;
+  -o-box-shadow:@n1 @n2 @n3 @n4 @n5;
+}
+//圆角
+.br(@x:5px){
+  border-radius: @x;
+  -webkit-border-radius: @x;
+  -moz-border-radius: @x;
+}
+//文字省略
+.tov(){
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@mcr:#ff6600;
+/*顶部*/
+.top{width: 100%;height: 30px;line-height:30px;background:@cr;
+  .bb();min-width: 1210px;
+.w{.w();overflow: hidden;}
+  .f1 img{.pr();top:-1px;margin-right: 5px;}
+  .f1{.fl();padding: 0 2px;}
+  .f2{.fr();
+  li{margin-right: 10px;}
+  span{margin: 3px;
+  a{margin: 0 5px;
+  }
+    .cr{color:@mcr;}
+  }
+    a:hover{color: @mcr;}
+  }
+  .line{width: 1px;height: 12px;.bl(#bbb);margin-top: 9px;}
+  li{.fl();}
+}
+/*logo、搜索框、结算*/
+.header{
+  overflow: hidden;;
+  min-width: 1210px;
+  .w{.w();padding: 30px 0;
+  .f1,.f2{float: left;}
+    .f1 img{width: 280px;margin: 5px 250px 0 30px;}
+  .f3{float: right;
+  .btnCarSettlement{
+    position: relative;top:3px;
+    width:120px;height:30px;border: 1px solid #dfdfdf;line-height: 30px;padding: 0 10px;border-radius: 4px;
+    background: #f9f9f9;margin-right:15px;
+    i{display:block;position: absolute;}
+    .ico-car{width: 24px;height: 22px;background-size:100% !important;background: url(../images/ico-cart.png) no-repeat;
+    top:6px;left: 10px;}
+  a{margin-left: 32px;}
+    .ico-sanjiao{width:8px;height: 16px;background-size:100% !important;background: url(../images/ico-sanjiao.png) no-repeat;
+    right:10px;top:9px;
+    }
+    &:hover{
+      .boxshadow(0,0,10px,1px,#ddd);
+    }
+  }
+  }
+  }
+}
+.fw(){font-family: "Microsoft YaHei";}
+.search{
+  font-size: 0;
+  .srh-box{width:360px;height: 24px;line-height: 24px;padding: 4px;border:2px solid #003f98;border-right: none;}
+  .srh-btn{width:80px;color: #FFF;height: 36px;border: none;line-height: 1px;.pr();top: 1px;letter-spacing: 10px;text-indent: 10px;
+    *line-height:36px;*top:0;*text-indent:0;
+  background: #003f98;font-size: 14px;cursor: pointer;.fw();
+    &:hover{opacity: 0.9;}
+  }
+}
+.hot_search{
+  margin-top: 4px;color: #818181;
+  a{margin-left: 5px;color: #818181;
+  &:hover{color: @mcr;}
+  }
+}
+/*导航*/
+.nav{width: 100%;height: 44px;background: #003f98;margin-top: 15px;min-width: 1210px;
+.w{.w();
+>li{float: left;line-height: 44px;.pr();z-index: 2;
+a{color: #FFF;font-size: 14px;.fw();display: block;letter-spacing: 1px;
+padding-left:29px;}
+}
+  .line{width: 1px;height: 12px;border-left: 1px solid #0f5ac5;margin:16px 0 0 29px;}
+  >.l1{width:225px;.pr();
+    .title{
+      background:#699fe5;
+      padding: 0 15px;
+      a{font-size: 16px;padding: 0;}
+      i{display:block;width: 11px;height:16px;background: url(../images/ico-arrow.png) no-repeat;background-size: 100% !important;
+        .pa();right:10px;top:20px;}
+    }
+  }
+  .ico-Selling{width: 17px;height:17px;.bki("../images/ico-hot.png","images/ico-hot.png");
+    .pa();right:-10px;top: -7px;display: block;
+  }
+}
+  .list_l{.pa();top: 44px;left: 0;width: 100%;z-index:9999;
+   ul{font-size: 0;
+   }
+  .l1{background: #c7dfff;padding:11px 10px;line-height:0 !important;}
+    h3{color: #4b3331;font-size: 14px;.fw();height:22px;line-height:20px;}
+    li ul{
+     float: left;
+      li{line-height: 20px !important;}
+      a{padding: 0;color:#828282;font-size: 12px;white-space: nowrap;
+      &:hover{color:#699fe5;}
+      }
+    }
+    .u2{margin-left: 15px;}
+    .nav-Healthapparatus{width: 60px;height: 60px;.pa();right: 10px;top: 15px;
+    .bki("../images/nav-Healthapparatus.png",'images/nav-Healthapparatus.png');
+    }
+  .l2,.l3,.l4{background: #FFF;overflow: hidden;padding: 10px;.pr();.bb(#dfdfdf);
+    h3{margin:4px 0;}
+  ul{float: left;width: 160px;
+  li{float: left;margin-right:10px;
+  }
+  }
+  }
+    .nav-healthproducts{width: 50px;height: 60px;.pa();top:10px;right: 15px;
+      .bki("../images/nav-healthproducts.png",'images/nav-healthproducts.png');
+    }
+    .nav-geenfood{
+      width: 55px;height: 40px;.pa();top:15px;right: 15px;
+      .bki("../images/nav-geenfood.png",'images/nav-geenfood.png');
+    }
+    .nav-Healthsuit{
+      width: 55px;height: 40px;.pa();top:18px;right: 15px;
+      .bki("../images/nav-Healthsuit.png",'images/nav-Healthsuit.png');
+    }
+    .l4{.bb(#bfbfbf);}
+  }
+  /*公告、登录*/
+  .list_r{.pa();right: 0;top: 54px;width: 220px;z-index:9999;
+  .icon{
+    padding:8px 10px 5px 10px;
+    *padding-bottom:8px;
+    overflow: hidden;
+    .linear();
+    .bki("../images/lr-bg.jpg","images/lr-bg.jpg");
+    li{width:100%/3;.fl();
+    .ico{margin: auto;}
+    .t{height:25px;line-height: 25px;color: #f87820;text-align: center;.fw();*height:20px;
+    }
+    font-size: 14px;}
+    .ico-zheng .ico{  .bki("../images/ico-zheng.png",'images/ico-zheng.png');.wh(42px,38px);}
+    .ico-8 .ico{  .bki("../images/ico-8.png",'images/ico-8.png');.wh(38px,38px);}
+    .ico-jing .ico{  .bki("../images/ico-jing.png",'images/ico-jing.png');.wh(38px,38px);}
+  }
+    /*公告*/
+    .news{
+      height: 115px;
+      padding:10px;
+      background: #FFF;
+      overflow: hidden;
+      .n-main{overflow:hidden;height: 100%;}
+      .title {
+        li{height: 23px !important;line-height: 23px;}
+        a {
+          color: #666; padding: 0;font-size: 12px;letter-spacing: 0;
+          .tov();
+          &:hover{color: @mcr;}
+        }
+      }
+    }
+    /*会员登录*/
+    .login{width:100%;height:174px;border-top: 1px solid #d9cfcd;padding-bottom: 10px;.bki("../images/bg-Rollangle.jpg","images/bg-Rollangle.jpg");
+    h2{font-size: 14px;font-weight: 700;color: #010101;.fw();height: 30px;line-height: 30px;text-indent: 50px;.pr();letter-spacing: 1px;margin-bottom: 10px;
+    i{.pa();top: 0;left: 10px;width: 40px;height: 30px;.bki("../images/ico-sale.png",'images/ico-sale.png');}
+    }
+     input[type="text"]{width:192px;height:24px;line-height:24px;border: 1px solid #b4b4b4;margin: auto;display: block;margin-bottom:10px;padding:4px;}
+    .btnLogin{width:90px;height: 32px;color:#705001;font-size: 14px;border: none;
+    margin-left: 10px;.br(3px);
+      .bki("../images/btnlogin-bg.jpg","images/btnlogin-bg.jpg");
+    }
+      a{display:inline;color: #2b58ff;letter-spacing: 0;padding: 0;margin-left:10px;font-size: 12px;}
+    }
+  }
+}
+/*banner*/
+.banner{width: 100%;height:416px;overflow: hidden;.mw();
+ul{
+  a{display: block;width: 100%;height: 100%;
+  img{width: 100%;min-height: 100%;}
+  }
+}
+}
+/****************推荐商品***************/
+.main{.w();}
+/*品牌特卖*/
+.Brandsale{
+  h3{font-size: 16px;color: #333;.fw();letter-spacing: 1px;margin: 20px 0;}
+ul{overflow: hidden;}
+  li{float: left;border: 1px solid #ececec;padding: 5px;height:147px;border-left: none;width: 200px;
+    &:nth-child(even){width: 110px;}
+    &:first-child{.bl(#ececec);}
+    a{display: block;text-align: center;line-height: 147px;*font-size: 128px;}
+ img{max-width: 100%;}
+  }
+}
+/*广告位*/
+.advertisement{
+  margin: 20px 0;
+  width: 100%;
+  a{display: block;}
+  img{width: 100%;}
+}
+/*抢购、热卖、新品*/
+.Panicbuying{
+  width: 100%;
+  border:1px solid #d0d0d0;
+  border-top: 2px solid #19a1db;
+  padding-bottom: 20px;
+  .tab{
+    overflow: hidden;;
+    li{float: left;border: 1px solid #dedede;width: 200px;line-height: 30px;height: 30px;text-align: center;border-top: none;border-left: none;background: #f9f9f9;
+      color: #333;.fw();font-size: 14px;cursor: pointer;
+    }
+    >.active{color: #ff6600;background: none;border-bottom: none;font-weight: 700;}
+  }
+  .pages{
+    ul{overflow: hidden;display: none;
+    &.active{display:block;}
+    }
+    li{float: left;width: 1210/6px;
+      >div{padding: 0 20px;}
+      &:hover{
+        img{transform:translateX(-15px);transition: all 1s;}
+      }
+    }
+    .p-img{height: 200px;
+    a{text-align: center;height:200px;line-height: 200px;display: block;overflow: hidden;*font-size: 178px;}
+    }
+    .p-info{
+      .p-price{color:#d00000;font-size: 16px;font-weight: 700;}
+      .p-name{margin:5px 0;
+      a{color: #333;line-height:18px;
+      &:hover{color:#19a1db;}
+      }
+      }
+    }
+    img{max-width: 100%;vertical-align: middle;}
+  }
+}
+/******************家用健康器械/保健品/健康食品/复合养生套餐*************************/
+.p-cr(@c){
+  >h3{color: @c;letter-spacing: 1px;}
+  .prolist{border-top: 2px solid @c;}
+  .p-name,.pm-info{
+    a:hover{color: @c;}
+  }
+}
+.probox{
+  border-top: 1px solid #e6e6e6;margin-top:30px;
+  >h3{font-size: 17px;height: 45px;line-height: 45px;.fw();text-indent:10px;}
+  .prolist{
+    .pr();
+    overflow: hidden;
+    .pro-min,.pr-list{.fl();}
+    .pro-min{
+      width: 210px;
+      img{width: 100%;}
+      .pm-info{border: 1px solid #ddd;margin-top: 10px;padding: 10px;
+      >h3{color:#333;font-size: 14px;margin-bottom:8px;}
+      ul{
+        li{.pr();  }
+        i{width: 3px;height: 3px;.bki("../images/ico-dot.png",'images/ico-dot.png');display: block;.pa();left: 0;top: 8px;}
+        a{margin-left: 15px;}
+      }
+      }
+    }
+    .pr-list{
+      >ul{
+        overflow: hidden;
+        >li{float: left;border: 1px solid #f3f3f3;margin-left: 10px;width: 238px;height: 214.5px;
+          &:hover{}
+          a{display: block;
+          img{width: 100%;text-align: center;}
+          }
+          }
+        &:first-child{margin-bottom: 10px;}
+        .l2{width: 488px;}
+        .p-img{
+          a{height: 170px;overflow: hidden; }
+        }
+        .p-info{
+          text-align: center;
+          .p-name{line-height: 25px;.tov();
+          }
+          .p-price{color: #cc0000;font-size: 14px;line-height: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+.loading{
+  display: none;
+  z-index: 999;
+  position:absolute;top: 0;left: 0;bottom: 0;right: 0;background: #FFF;
+  img{display: block;background: #FFF;
+    .pa();top: 50%;left: 50%;margin-top: -150px;margin-left: -200px;
+  }
+}
+
+/*家用健康器械*/
+.healthapparatus{
+  .p-cr(#699fe5);
+}
+/*保健品*/
+.healthproducts{
+  .p-cr(#f29a3f);
+}
+/*健康食品*/
+.healthfood{
+  .p-cr(#a9d741);
+}
+/*复合养生套餐*/
+.healthpackage{
+  .p-cr(#f97b93);
+}
+/*********************底部*******************/
+.footer{width: 100%;background: #f0f0f0;margin-top: 40px;min-width: 1210px;
+.w{.w();}
+.f-top{
+  overflow: hidden;
+  border-bottom:1px solid #e0e0e0;
+  li{float: left;width:302px;text-align: center;height:80px;line-height:80px;}
+}
+.f-line{width: 100%;height: 0;border-top: 1px solid #FFF;}
+.f-bottom{
+  padding: 15px 0;
+  overflow: hidden;
+  .f-left{
+    float: left;
+    overflow: hidden;
+  ul{.fl();.fw();margin: 0 30px 0 40px;}
+    a{color: #908f8f;line-height:25px;
+    &:hover{color: @mcr;}
+    }
+  }
+  h3{font-weight: normal;font-size: 14px;color: #333;margin-bottom:5px;}
+  .f-right{float: left;margin-left:80px;border-left: 1px solid #fff;
+    .fr-line{border-left: 1px solid #e0e0e0;padding:5px 20px 30px 20px;}
+    h3{.fw();position: relative;top: -5px;
+    }
+    .ico-hot{
+      .pr();
+      i{.pa();width: 25px;height: 12px;.bki("../images/hot2.jpg",'images/hot2.jpg');display: block;top: -3px;left:75px;}}
+
+    .tip{color: #908f8f;margin-bottom: 10px;}
+    ul{
+      overflow: hidden;
+      li{float: left;
+       img{width: 61px;height: 61px;}
+      .btn{width: 120px;height:25px;background: #999dbd;color: #FFF;text-align: center;line-height: 25px;font-size: 14px;.pr();cursor: pointer;}
+        &:first-child{margin-right: 10px;}
+      }
+      .Appstore{margin-bottom:11px;
+        &:hover{opacity: 0.9;}
+      }
+      .Android{
+        &:hover{opacity: 0.9;}
+      }
+      .ico-ios{width:19px;height: 22px;.bki("../images/ico-ios.jpg",'images/ico-ios.jpg');.pa();left: 8px;top: 1px;}
+      .ico-android{width:19px;height: 22px;.bki("../images/ico-android.jpg",'images/ico-android.jpg');.pa();left: 8px;top: 1px;}
+      .ico-download{width:20px;height:20px;.bki("../images/download.jpg",'images/download.jpg');.pa();right: 8px;top: 3px;}
+    }
+  }
+}
+}
+/*copyright*/
+.copyright{text-align: center;margin: 15px 0 30px 0;}
+
+.phcolor{color: #999;}
+
+/******************右侧边栏************************/
+.br2(@n1,@n2,@n3,@n4){
+  border-radius:@n1 @n2 @n3 @n4;
+  -webkit-border-radius:@n1 @n2 @n3 @n4;
+  -moz-border-radius:@n1 @n2 @n3 @n4;
+}
+//透明度
+.opt(@n1:0,@n2:0,@n3,@o:0.85){
+  background:rgb(@n1,@n2,@n3);
+  opacity:@o;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=(@o*100));
+  background: rgba(@n1,@n2,@n3,@o);
+}
+.nav-r{border-left:10px solid #7A7A7A;position: fixed;top: 0;bottom:0;right:0;z-index: 9999;
+ul{
+  width: 36px;
+  position: absolute;bottom:50px;
+  li{width:36px !important;height: 30px !important;.pr();right:36px;margin-top:1px;background:#7A7A7A;line-height:28px;text-align:center;text-indent:-10px;cursor: pointer;.br2(4px,0,0,4px);
+  a,div{display:inline-block;vertical-align: middle;margin: auto;*position: absolute;*top:6px;*left:5px;
+    width: 17px;height: 15px;
+  }
+    &:hover{background: #ffc000;}
+  }
+.nav-home{
+  a{.bki("../images/nav-home.png","images/nav-home.png");}
+}
+  .nav-login{
+    div{.bki("../images/nav-login.png","images/nav-login.png");width: 16px;height: 16px;}
+  }
+  .nav-car{
+    div{.bki("../images/nav-car.png","images/nav-car.png");height: 17px;}
+    &.active{background: #ffc000;}
+  }
+  .nav-qr{
+    div{.bki("../images/nav-qr.png","images/nav-qr.png");}
+  }
+  .nav-top{
+    div{.bki("../images/nav-top.png","images/nav-top.png");}
+  }
+}
+  //购物车
+  .nr-main{
+    background: #FFF;
+    width: 270px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+    >h3{height: 45px;line-height: 45px;font-size: 14px;background: #f7f7f7;color: #33475f;letter-spacing: 1px;.pr();
+    text-indent: 30px;.fw();
+    }
+    .s-car{display: block;width: 16px;height: 16px;.bki("../images/s-car.png","images/s-car.png");position: absolute;left:8px;top: 14px;}
+    .close{display: block;width: 18px;height: 18px;.bki("../images/s-fork.png","images/s-fork.png");.pa();right:5px;top:14px;cursor: pointer;}
+    .car-empty{
+      position: absolute;left:35px;top:50%;margin-top: -104px;
+      i{width: 150px;height:157px;.bki("../images/sh-car1.png","images/sh-car1.png");display: block;margin: auto;}
+     input[type=button]{width:200px;height: 30px;border:none;background: #699fe5;color: #FFF;font-size: 16px;.br(4px);
+     display: block;margin: 20px auto 0 auto;}
+    }
+    .car-settlement{width:270px;height:36px;position: absolute;bottom:20px;right: 0;
+      overflow: hidden;
+      .small-car-pn{.fl();margin-left: 10px;
+      >div{height: 18px;line-height: 18px;}
+        span{color: #699fe5;font-weight: 400;}
+      }
+      .small-car-price{
+        >span{.pr();top:1px;}
+      }
+      .small-car-btn{.fr();display: block;width:100px;height: 100%;background: #699fe5;
+      color: #FFF;font-size: 14px;text-align: center;line-height: 36px;
+      }
+    }
+  }
+}
+
+//@media all and(min-width: 0) {
+//  .nav-r ul li{
+//    a,div{width:17px;height:16px;}
+//  }
+//}
+/***登录弹出层**/
+.login-layer{
+  display:none;
+  .login-layer-inside{
+    position:fixed;top: 0;bottom: 0;left: 0;right: 0;background:#000;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    background: rgba(0,0,0,0.7);z-index: 9999;
+  }
+.login-box{background: #FFF;width: 340px;height: 500px;margin: auto;position:fixed;.boxshadow(10px,10px,20px,1px,rgba(0, 0, 0, 0.5));
+  top:50%;margin-top:-250px;left: 50%;margin-left: -160px;z-index: 9999;
+  h2{font-size: 18px;letter-spacing:1px;height: 40px;line-height: 40px;background:#699fe5;text-indent: 10px;color: #FFF;.fw();}
+.ico-fork{.pa();right: 10px;top: 10px;width:20px;height: 20px;.bki("../images/ico-fork.png","images/ico-fork.png");cursor: pointer;}
+.lbox-main{
+ padding: 40px 20px 20px 20px;overflow: hidden;
+.lm-user,.lm-pwd,.btnLogin2{width: 100%;height: 40px;margin-bottom: 20px;}
+.lm-user,.lm-pwd{border: 1px solid #DDD;overflow: hidden;line-height: 40px;
+.ico,input{display: inline-block;
+*display:inline;*zoom:1;}
+  .ico{margin-left:5px;width: 20px;height: 20px;position: relative;top:5px;}
+  input{margin-left: 5px;height: 100%;border: none;width: 220px;font-size: 14px;
+  }
+}
+.lm-user{
+  .ico{.bki("../images/lg-user.png","images/lg-user.png");}
+  }
+.lm-pwd{
+  .ico{.bki("../images/lg-pwd.png","images/lg-pwd.png");}
+}
+.ck-forget{
+  margin:20px 0 15px 0;
+  overflow: hidden;
+  .checkbox{
+    >i{width:15px;height:15px;border: 1px solid #DDD;display: block;float: left;
+    i{width: 100%;height: 100%;display: block;.bki("../images/lg-hook.png","images/lg-hook.png");}
+    }
+    .ckbox{display: none;}
+    span{float: left;color: #666;margin-left: 5px;}
+  }
+  a{float: right;color: #699fe5;}
+}
+ .btnLogin2{border: none;background: #699fe5;color: #FFF;font-size: 14px;letter-spacing: 10px;text-indent: 10px;
+ *letter-spacing: 0;.fw();margin-bottom:15px;
+ }
+  .register{float: right;color: #699fe5;}
+}
+}
+}
